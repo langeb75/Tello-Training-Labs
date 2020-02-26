@@ -49,6 +49,13 @@ def square():
         sendmsg('forward 100')  #Drone will go forward 100cm
         sendmsg('ccw 90')  #Drone will turn Counter Clockwise 90 degrees
 
+# Triangle Function
+def triangle():
+    sendmsg('up 100')
+    for i in range(3):
+        sendmsg('forward 100')  #Drone will go forward 100cm
+        sendmsg('ccw 120') #Drone will turn Counter Clockwise 120 degrees
+
 
 print("\nMr. Lange")
 print("Program Name: Tello Training Lab, Sqaure Function")
@@ -65,7 +72,8 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        square()
+        #square()
+        triangle()
 
         sendmsg('land')
 
